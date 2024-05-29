@@ -6,8 +6,8 @@ cat > body <<EOF
 {
   "title": "$title",
   "body": "$body",
-  "head": $head,
-  "base": $base
+  "head": "$head",
+  "base": "$base"
 }
 EOF
 
