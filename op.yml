@@ -35,10 +35,10 @@ inputs:
       constraints: { minLength: 1 }
       description: base of the created pull request (e.g. "main")
       default: main
-# outputs:
-#   id:
-#     number:
-#       description: ID of the created release, can be used as input for other github.release ops
+outputs:
+  pullRequest:
+    object:
+      description: The pull request object from Githubs ReST API
 version: 1.0.0
 run:
   container:
@@ -54,5 +54,10 @@ run:
       head:
       base:
     files:
+      /request.json:
+        title:
+        body:
+        head:
+        base:
       /cmd.sh: $(/cmd.sh)
-      /id: $(id)
+      /pullRequest: $(pullRequest)
