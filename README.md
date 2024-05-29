@@ -1,5 +1,7 @@
 [![Build Status](https://github.com/opspec-pkgs/github.repo.pullrequest.create/workflows/build/badge.svg?branch=master)](https://github.com/opspec-pkgs/github.repo.pullrequest.create/actions?query=workflow%3Abuild+branch%3Amaster)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 creates a pullrequest against a github repo
@@ -23,6 +25,18 @@ opctl run github.com/opspec-pkgs/github.repo.pullrequest.create#1.0.0
 ```yaml
 op:
   ref: github.com/opspec-pkgs/github.repo.pullrequest.create#1.0.0
+  inputs:
+    body:  # 👈 required; provide a value
+    head:  # 👈 required; provide a value
+    loginPassword:  # 👈 required; provide a value
+    loginUsername:  # 👈 required; provide a value
+    owner:  # 👈 required; provide a value
+    repo:  # 👈 required; provide a value
+    title:  # 👈 required; provide a value
+  ## uncomment to override defaults
+  #   base: "main"
+  outputs:
+    pullRequest:
 ```
 
 # Support

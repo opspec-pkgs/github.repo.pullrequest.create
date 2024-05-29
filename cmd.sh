@@ -2,29 +2,16 @@
 
 set -e
 
-cat > body <<EOF
-{
-  "title": "$title",
-  "body": "$body",
-  "head": $head,
-  "base": $base
-}
-EOF
-
 statusCode=$(curl \
     --silent \
-    --output response \
+    --output /pullRequest.json \
     --write-out "%{http_code}" \
     --user "${loginUsername}:${loginPassword}" \
     -X POST "https://api.github.com/repos/${owner}/${repo}/pulls" \
-    -d @body)
-
-echo "$statusCode"
-cat response
+    -d @/request.json)
 
 if test "$statusCode" -ne 201; then
+echo "failed to create pull request for repo $repo. Response code: $statusCode"
+cat /pullRequest.json
 exit 1
 fi
-
-# Record the release ID
-cat response | jq -r .id | tr -d '\n' > /id
