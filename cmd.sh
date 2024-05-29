@@ -11,6 +11,7 @@ statusCode=$(curl \
     -d @/request.json)
 
 if test "$statusCode" -ne 201; then
+echo "failed to create pull request for repo $repo. Response code: $statusCode"
 cat /pullRequest.json
 exit 1
 fi
