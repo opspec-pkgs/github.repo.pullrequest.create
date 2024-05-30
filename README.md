@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/opspec-pkgs/github.repo.pullrequest.create/workflows/build/badge.svg?branch=master)](https://github.com/opspec-pkgs/github.repo.pullrequest.create/actions?query=workflow%3Abuild+branch%3Amaster)
+[![Build Status](https://github.com/opspec-pkgs/github.repo.pullrequest.create/workflows/build/badge.svg?branch=main)](https://github.com/opspec-pkgs/github.repo.pullrequest.create/actions?query=workflow%3Abuild+branch%3Amain)
 
 <img src="icon.svg" alt="icon" height="100px">
 
@@ -56,4 +56,4 @@ and [tagged](https://git-scm.com/book/en/v2/Git-Basics-Tagging); see
 # Contributing
 
 see
-[project/CONTRIBUTING.md](https://github.com/opspec-pkgs/project/blob/master/CONTRIBUTING.md)
+[project/CONTRIBUTING.md](https://github.com/opspec-pkgs/project/blob/main/CONTRIBUTING.md)
